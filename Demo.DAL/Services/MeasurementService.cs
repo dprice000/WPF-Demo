@@ -1,25 +1,44 @@
-﻿using System;
+﻿using Demo.DAL;
+using System;
+using System.Linq;
 
 namespace Demo.DAL.Services
 {
     public class MeasurementService
     {
-        private DBCon
+        private LIMSContext dbContext;
 
-
-        public MeasurementService()
+        public MeasurementService(ILIMSContext dbContext)
         {
-
+            this.dbContext = (LIMSContext)dbContext;
         }
 
-        public void CreateMeasurement(Measurement measurement)
+        public void Create(Measurement measurement)
         {
-
+            this.dbContext.Measurements.Add(measurement);
+            this.dbContext.SaveChanges();
         }
 
-        public void GetMeasurement(Guid ID)
+        public Measurement Get(Guid ID)
         {
+            return this.dbContext.Measurements.Find(ID);
+        }
 
+        public void Update(Measurement measurment)
+        {
+            this.dbContext.Measurements.Attach(measurment);
+            this.dbContext.SaveChanges();
+        }
+
+        public void Delete(Guid ID)
+        {
+            var meas = this.dbContext.Measurements.Find(ID);
+            this.dbContext.Measurements.Remove(meas);
+        }
+
+        public void Delete(Measurement measurement)
+        {
+            this.dbContext.Measurements.Remove(measurement);
         }
     }
 }
