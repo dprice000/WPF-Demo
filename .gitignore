@@ -2,3 +2,6 @@ Packages/
 Demo/bin/
 Demo/obj/
 Demo/Properties
+Demo.DAL/bin/
+Demo.DAL/obj/
+Demo.DAL/Properties
