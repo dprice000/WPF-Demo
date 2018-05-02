@@ -23,6 +23,12 @@ namespace Demo.Pages
         public InputPage()
         {
             InitializeComponent();
+
+            var vm = new InputPageViewModel();
+            vm.Name = "Testing for fun";
+            vm.Value = 200.00;
+            vm.Timestamp = DateTime.Now;
+            this.DataContext = vm;
         }
     }
 }

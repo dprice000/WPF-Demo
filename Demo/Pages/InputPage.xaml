@@ -14,10 +14,12 @@
                 <mui:Link DisplayName="Item 2" Source="/Pages/Charts.xaml" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
-        <StackPanel Margin="0,0,-117,0" HorizontalAlignment="Right" Width="117">
-            <xctk:IntegerUpDown Value="1564" Margin="20,0,0.143,0" />
-            <xctk:DateTimePicker AllowSpin="True"/>
-            <Button Style="{StaticResource ContentRoot}" Content="Test"></Button>
+        <StackPanel Margin="0,0,-146,0" HorizontalAlignment="Right" Width="146">
+            <Label Content="{Binding Name}"  Height="20" HorizontalAlignment="Left" Width="146" />
+            <xctk:DecimalUpDown Value="{Binding Value}" HorizontalAlignment="Left" Width="146" />
+            <Label Content="{Binding UoM}" />
+            <Label Content="{Binding Timestamp}" />
+            <Button Content="Submit" Style="{StaticResource ContentRoot}" HorizontalAlignment="Left" Margin="16,28,0,16" Width="114" />
         </StackPanel>
     </Grid>
 </UserControl>

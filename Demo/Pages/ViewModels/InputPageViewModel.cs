@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace Demo.DAL
+namespace Demo.Pages
 {
-    public class Measurement
+    public class InputPageViewModel
     {
-        public Guid ID { get; set; }
         public string Name { get; set; }
         public string UoM { get; set; }
         public double Value { get; set; }
