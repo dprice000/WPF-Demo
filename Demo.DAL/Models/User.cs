@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Demo.DAL
+namespace Demo.DAL.Models
 {
     public class User
     {

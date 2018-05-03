@@ -19,7 +19,7 @@
             <xctk:DecimalUpDown Value="{Binding Value}" HorizontalAlignment="Left" Width="146" />
             <Label Content="{Binding UoM}" />
             <Label Content="{Binding Timestamp}" />
-            <Button Content="Submit" Style="{StaticResource ContentRoot}" HorizontalAlignment="Left" Margin="16,28,0,16" Width="114" />
+            <Button Content="Submit" Style="{StaticResource ContentRoot}" Click="Button_Click" HorizontalAlignment="Left" Margin="16,28,0,16" Width="114" />
         </StackPanel>
     </Grid>
 </UserControl>

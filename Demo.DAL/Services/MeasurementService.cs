@@ -1,4 +1,5 @@
 ﻿using Demo.DAL;
+using Demo.DAL.Models;
 using System;
 using System.Linq;
 
@@ -8,9 +9,9 @@ namespace Demo.DAL.Services
     {
         private LIMSContext dbContext;
 
-        public MeasurementService(ILIMSContext dbContext)
+        public MeasurementService()
         {
-            this.dbContext = (LIMSContext)dbContext;
+            this.dbContext = new LIMSContext();
         }
 
         public void Create(Measurement measurement)

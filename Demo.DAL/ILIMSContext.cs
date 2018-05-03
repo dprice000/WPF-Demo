@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Demo.DAL.Models;
+using System;
 using System.Data.Entity;
 
 namespace Demo.DAL
